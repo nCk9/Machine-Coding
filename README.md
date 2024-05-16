@@ -1,2 +1,2 @@
-# Machine-Coding-
+# Machine-Coding
 various machine coding problems
