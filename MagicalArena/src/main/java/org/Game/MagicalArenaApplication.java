@@ -1,9 +1,9 @@
-package main;
+package org.Game;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static main.utils.ValidateInput.isInvalidInput;
+import static org.Game.utils.ValidateInput.isInvalidInput;
 
 public class MagicalArenaApplication {
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class MagicalArenaApplication {
         try {
             Scanner scanner = new Scanner(System.in);
             do {
-                System.out.print("Enter Player A's health, strength and attack respectively: ");
+                System.out.print("Enter org.Game.Player A's health, strength and attack respectively: ");
                 Integer aHealth = scanner.nextInt();
                 Integer aStrength = scanner.nextInt();
                 Integer aAttack = scanner.nextInt();
@@ -21,7 +21,7 @@ public class MagicalArenaApplication {
             } while (isInvalidInput(playerA));
 
             do {
-                System.out.print("Enter Player B's health, strength and attack respectively: ");
+                System.out.print("Enter org.Game.Player B's health, strength and attack respectively: ");
                 Integer bHealth = scanner.nextInt();
                 Integer bStrength = scanner.nextInt();
                 Integer bAttack = scanner.nextInt();

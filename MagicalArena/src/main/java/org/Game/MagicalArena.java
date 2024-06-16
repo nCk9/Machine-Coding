@@ -1,4 +1,4 @@
-package main;
+package org.Game;
 
 import static java.lang.Math.max;
 
@@ -28,9 +28,9 @@ public class MagicalArena {
 
         //publish results
         if (playerB.getIsWinner())
-            System.out.println("Player B is the winner of the Game!");
+            System.out.println("org.Game.Player B is the winner of the Game!");
         else
-            System.out.println("Player A is the winner of the Game!");
+            System.out.println("org.Game.Player A is the winner of the Game!");
     }
 
     private void simulateAttack(Player attacker, Player defender) throws Exception {
