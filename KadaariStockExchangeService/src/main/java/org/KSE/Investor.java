@@ -7,5 +7,13 @@ public class Investor {
     String investorName;
     HashMap<String, Integer> companiesHeld;
 
-    boolean RegisteredWithKSE = false;
+    Investor(String name){
+        this.investorName = name;
+        this.companiesHeld = new HashMap<>();
+    }
+
+    void addCompanyToPortfolio(String companyName, String quantity){
+
+    }
+
 }
