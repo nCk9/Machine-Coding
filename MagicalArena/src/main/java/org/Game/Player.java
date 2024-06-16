@@ -1,4 +1,4 @@
-package main;
+package org.Game;
 
 import lombok.Getter;
 import lombok.Setter;

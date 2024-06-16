@@ -1,6 +1,7 @@
-package main.utils;
+package org.Game.utils;
 
-import main.Player;
+
+import org.Game.Player;
 
 public class ValidateInput {
 
