@@ -17,11 +17,15 @@ public class Investor {
     }
 
     public void addCompanyToPortfolio(String companyName, Integer quantity){
-        this.companiesHeld.put(companyName, quantity);
+        companiesHeld.put(companyName, quantity);
     }
 
     public void getPortfolio(){
         for(String companyName: companiesHeld.keySet())
             System.out.println(companyName + ",  " + companiesHeld.get(companyName));
+    }
+
+    public Integer getQuantity(String companyName) {
+        return companiesHeld.get(companyName);
     }
 }
