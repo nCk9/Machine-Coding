@@ -7,13 +7,13 @@ import lombok.Setter;
 @Setter
 public class Company {
 
-    String companyName;
-    Integer totalShares;
-    Float initialSharePrice;
-    Float initialCompanyWorth;
-    Float currentPricePerShare;
-    Float currentCompanyWorth;
-    Integer currentShares;
+    private String companyName;
+    private Integer totalShares;
+    private Float initialSharePrice;
+    private Float initialCompanyWorth;
+    private Float currentPricePerShare;
+    private Float currentCompanyWorth;
+    private Integer currentShares;
 
     Company(String name, Integer shares, Float perSharePrice, Float companyWorth){
         this.companyName = name;
