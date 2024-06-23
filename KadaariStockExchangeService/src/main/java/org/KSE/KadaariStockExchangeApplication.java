@@ -12,21 +12,23 @@ public class KadaariStockExchangeApplication {
         while(true) {
             System.out.println("Please input your action: ");
             String actionCode = inputScanner.next();
-            switch (actionCode) {
-                case "RC": kadaariStockExchange.registerCompany(inputScanner);
+            switch (actionCode.toLowerCase()) {
+                case "rc": kadaariStockExchange.registerCompany(inputScanner);
                     break;
-                case "RI": kadaariStockExchange.registerInvestor(inputScanner);
+                case "ri": kadaariStockExchange.registerInvestor(inputScanner);
                     break;
-                case "Buy": kadaariStockExchange.buyForInvestor(inputScanner);
+                case "buy": kadaariStockExchange.buyForInvestor(inputScanner);
                     break;
-                case "Sell": kadaariStockExchange.sellForInvestor(inputScanner);
+                case "sell": kadaariStockExchange.sellForInvestor(inputScanner);
                     break;
-                case "I": kadaariStockExchange.getInvestorDetails(inputScanner);
+                case "i": kadaariStockExchange.getInvestorDetails(inputScanner);
                     break;
-                case "C": kadaariStockExchange.getCompanyDetails(inputScanner);
+                case "c": kadaariStockExchange.getCompanyDetails(inputScanner);
+                    break;
+                case "exit":
                     break;
                 default:
-                    System.out.println("In the default case!");
+                    System.out.println("In the default case! Please put correct input.");
             }
         }
     }

@@ -109,6 +109,7 @@ public class KadaariStockExchange {
         company.setCurrentShares(company.getCurrentShares()+count);
         company.setCurrentCompanyWorth(finalCurrentWorth);
         company.setCurrentPricePerShare(currentAvgMsp);
+        investor.reduceQuantity(company.getCompanyName(), quantity);
         return (Float)sumMsps/count;
     }
 

@@ -1,6 +1,5 @@
 package org.KSE;
 
-import jdk.nashorn.internal.runtime.logging.Logger;
 import lombok.Getter;
 
 import java.util.HashMap;
@@ -27,5 +26,14 @@ public class Investor {
 
     public Integer getQuantity(String companyName) {
         return companiesHeld.get(companyName);
+    }
+
+    public void reduceQuantity(String companyName, Integer quantitySold) {
+        Integer currentQuantity = companiesHeld.get(companyName);
+        int finalQuantity = currentQuantity - quantitySold;
+        if(finalQuantity == 0)
+            companiesHeld.remove(companyName);
+        else
+            companiesHeld.put(companyName, finalQuantity);
     }
 }
