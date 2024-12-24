@@ -1,10 +1,12 @@
 package org.KSE;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import java.util.Scanner;
 
 public class KadaariStockExchangeApplication {
-    private static final KadaariStockExchange kadaariStockExchange = new KadaariStockExchange();
-
+    static AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+    static KadaariStockExchange kadaariStockExchange = context.getBean(KadaariStockExchange.class);
     public static void main(String[] args) {
         System.out.println("Hello, world!");
         Scanner inputScanner = new Scanner(System.in);

@@ -1,15 +1,22 @@
 package org.KSE;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+@Component
 public class KadaariStockExchange {
-    private List<Investor> investorList;
-    private List<Company> companyList;
+    private final List<Investor> investorList;
+    private final List<BuyingEntity> buyingEntityList;
+
+    @Autowired
+    private BuyingEntityFactory buyingEntityFactory;
 
     KadaariStockExchange(){
         this.investorList = new ArrayList<>();
-        this.companyList = new ArrayList<>();
+        this.buyingEntityList = new ArrayList<>();
     }
 
     public void registerCompany(Scanner inputScanner) {
@@ -17,8 +24,8 @@ public class KadaariStockExchange {
         Integer countOfShares = inputScanner.nextInt();
         Float initialPricePerShare = inputScanner.nextFloat();
         Float initialCompanyWorth = inputScanner.nextFloat();
-        Company company = new Company(companyName, countOfShares, initialPricePerShare, initialCompanyWorth);
-        companyList.add(company);
+        BuyingEntity buyingEntity = buyingEntityFactory.getBuyingEntity("company", companyName, countOfShares, initialPricePerShare, initialCompanyWorth);
+        buyingEntityList.add(buyingEntity);
         System.out.println("Company " + companyName + " registered successfully with KSE!");
     }
 
@@ -135,17 +142,21 @@ public class KadaariStockExchange {
     }
 
     private Company isCompanyRegistered(String name){
-        for(Company company: companyList)
-            if(name.equals(company.getCompanyName()))
-                return company;
+        for(BuyingEntity entity: buyingEntityList) {
+            if(entity instanceof Company) {
+                Company company = (Company) entity; //type-casting entity (of type BuyingEntity) to Company
+                if (name.equals(company.getCompanyName()))
+                    return company;
+            }
+        }
         return null;
     }
 
-    public void getListOfCompaniesRegistered() {
-        for(Company iCompany: companyList){
-            System.out.println(iCompany.getCompanyName() + " " + iCompany.getTotalShares() + " " + iCompany.getInitialSharePrice() + " " + iCompany.getInitialCompanyWorth()) ;
-        }
-    }
+//    public void getListOfCompaniesRegistered() {
+//        for(Company iCompany: buyingEntityList){
+//            System.out.println(iCompany.getCompanyName() + " " + iCompany.getTotalShares() + " " + iCompany.getInitialSharePrice() + " " + iCompany.getInitialCompanyWorth()) ;
+//        }
+//    }
 
     public void getListOfInvestorsRegistered() {
         for(Investor iInvestor: investorList){
