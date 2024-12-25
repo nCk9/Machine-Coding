@@ -16,4 +16,6 @@ various machine coding problems
     
     Attack damage is 4 * 5 = 20 ; Defending strength = 5 * 3 = 15 ; org.Game.Player A health reduced by 5 to 45
     
-    And so on. 
+    And so on.
+2. Stock Exchange Service - 
+   follow this link: https://docs.google.com/document/d/17eGMMAcot_xca9oGl-wnD9SGnxnxPFea5Lm9B2Qk3ZU/edit?tab=t.0
