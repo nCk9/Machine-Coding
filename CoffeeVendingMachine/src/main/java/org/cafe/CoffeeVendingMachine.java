@@ -14,29 +14,21 @@ public class CoffeeVendingMachine {
 
     public void getMenu(){
         Map<String, Coffee> menu =  coffeeFactory.getCoffeesList();
+        int i=1;
         for(Map.Entry<String, Coffee> coffee: menu.entrySet()){
-            if(coffee.getValue() instanceof Espresso){
-                Espresso espresso = (Espresso) coffee.getValue();
-            System.out.println(coffee.getKey() + " for Rs" + espresso.getPrice());
-            }
+            System.out.println(Integer.toString(i) + ".) " + coffee.getKey() + " for Rs" + coffee.getValue().getCoffeePrice());
+            i++;
         }
     }
 
     public Float buyCoffee(String coffeeRequired){
         Coffee coffee = coffeeFactory.getCoffee(coffeeRequired);
-        if(coffee instanceof Espresso){
-            return ((Espresso) coffee).getPrice();
-        }
-        return 0F;
+        return coffee.getCoffeePrice();
     }
 
     public Float reduceQuantity(String coffeeRequired){
         Coffee coffee = coffeeFactory.getCoffee(coffeeRequired);
-        if(coffee instanceof Espresso){
-            Float remQuantity = (((Espresso) coffee).getRemainingQuantity());
-            ((Espresso) coffee).setRemainingQuantity(remQuantity-0.5F);
-            return ((Espresso) coffee).getRemainingQuantity();
-        }
-        return 0F;
+        coffee.setRemainingQuantity(); //reduces the current quantity buy 0.5L
+        return coffee.getRemainingQuantity();
     }
 }
