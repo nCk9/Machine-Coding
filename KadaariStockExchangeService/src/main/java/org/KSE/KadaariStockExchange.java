@@ -13,6 +13,8 @@ public class KadaariStockExchange {
 
     @Autowired
     private BuyingEntityFactory buyingEntityFactory;
+    @Autowired
+    private InvestorFactory investorFactory;
 
     KadaariStockExchange(){
         this.investorList = new ArrayList<>();
@@ -31,7 +33,7 @@ public class KadaariStockExchange {
 
     public void registerInvestor(Scanner inputScanner){
         String name = inputScanner.next();
-        Investor investor = new Investor(name);
+        Investor investor = investorFactory.getInvestor(name);
         investorList.add(investor);
         System.out.println("Investor " + name + " registered successfully with KSE!");
     }
