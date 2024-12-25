@@ -1,13 +1,11 @@
 package org.cafe;
 
-import lombok.Getter;
-import lombok.Setter;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Espresso implements Coffee{
+public class Cappuccino implements Coffee{
     private Float remainingQuantity = 100F;
-    private final Float price = 350F;
+    private final Float price = 550F;
 
     @Override
     public Float getCoffeePrice(){
