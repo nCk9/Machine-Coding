@@ -5,7 +5,7 @@ import lombok.Setter;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Espresso implements Coffee{
+public class Espresso extends Coffee{
     private Float remainingQuantity = 100F;
     private final Float price = 350F;
 

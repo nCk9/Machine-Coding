@@ -3,7 +3,7 @@ package org.cafe;
 import org.springframework.stereotype.Component;
 
 @Component
-public class FilterCoffee implements Coffee{
+public class FilterCoffee extends Coffee{
     private Float remainingQuantity = 100F;
     private final Float price = 50F;
 
