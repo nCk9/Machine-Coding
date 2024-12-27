@@ -1,9 +1,10 @@
 package org.cafe;
 
-public interface Coffee {
-    public Float getCoffeePrice();
+abstract class Coffee {
 
-    public Float getRemainingQuantity();
+    abstract Float getCoffeePrice();
 
-    public void setRemainingQuantity();
+    abstract Float getRemainingQuantity();
+
+    abstract void setRemainingQuantity();
 }
