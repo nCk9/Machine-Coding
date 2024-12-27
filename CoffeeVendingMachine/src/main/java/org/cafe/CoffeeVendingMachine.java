@@ -3,11 +3,30 @@ package org.cafe;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.awt.*;
 import java.util.Map;
 
 @Component
 public class CoffeeVendingMachine {
+
+    private static CoffeeVendingMachine coffeeVendingMachine;
+
+    private CoffeeVendingMachine(){
+        System.out.println("Inside coffeeVendingMachine constructor\n");
+    }
+
+    public static CoffeeVendingMachine getCoffeeVendingMachineInstance(){
+        if(coffeeVendingMachine == null)
+            coffeeVendingMachine = new CoffeeVendingMachine();
+        return coffeeVendingMachine;
+    }
+
+    @PostConstruct
+    public void init(){
+        if(coffeeVendingMachine == null)
+            coffeeVendingMachine = this;
+    }
 
     @Autowired
     CoffeeFactory coffeeFactory;
@@ -21,8 +40,9 @@ public class CoffeeVendingMachine {
         }
     }
 
-    public Float buyCoffee(String coffeeRequired){
+    public Float buyCoffee(String coffeeRequired) throws Exception {
         Coffee coffee = coffeeFactory.getCoffee(coffeeRequired);
+        if(coffee == null) throw new Exception("Invalid input: such coffee is not available");
         return coffee.getCoffeePrice();
     }
 
