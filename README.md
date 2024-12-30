@@ -19,3 +19,18 @@ various machine coding problems
     And so on.
 2. Stock Exchange Service - 
    follow this link: https://docs.google.com/document/d/17eGMMAcot_xca9oGl-wnD9SGnxnxPFea5Lm9B2Qk3ZU/edit?tab=t.0
+
+3. ATM: The ATM system should support basic operations such as balance inquiry, cash withdrawal, and cash deposit.
+   Users should be able to authenticate themselves using a card and a PIN (Personal Identification Number).
+   The system should interact with a bank's backend system to validate user accounts and perform transactions.
+   The ATM should have a cash dispenser to dispense cash to users.
+   The system should handle concurrent access and ensure data consistency.
+   The ATM should have a user-friendly interface for users to interact with.
+
+4. CoffeeVendingMachine:The coffee vending machine should support different types of coffee, such as espresso, cappuccino, and latte.
+   Each type of coffee should have a specific price and recipe (ingredients and their quantities).
+   The machine should have a menu to display the available coffee options and their prices.
+   Users should be able to select a coffee type and make a payment.
+   The machine should dispense the selected coffee and provide change if necessary.
+   The machine should track the inventory of ingredients and notify when they are running low.
+   The machine should handle multiple user requests concurrently and ensure thread safety.
