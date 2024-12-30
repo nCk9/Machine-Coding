@@ -34,6 +34,7 @@ public class ATMApplication {
 
             System.out.println("Above are your bank details. Please enter the amount you desire to withdraw: ");
             String withdrawalAmount = inputScanner.next();
+            //TODO: add validation to check if amt entered is in multiples of 100/500s.
             //TODO: add validation to check if ATM has that amount and if customer has enough balance.
 
             bankService.debitAmount(withdrawalAmount);
