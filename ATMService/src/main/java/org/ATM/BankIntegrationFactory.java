@@ -6,14 +6,16 @@ import org.ATM.Service.HDFCBankIntegration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
+import static org.ATM.ATMApplication.context;
+
 @Component
 public class BankIntegrationFactory {
 
     public BankIntegration getBankIntegrator(String bankName){
         if("hdfc".equalsIgnoreCase(bankName))
-            return new HDFCBankIntegration();
+            return context.getBean(HDFCBankIntegration.class);
         else if("axis".equalsIgnoreCase(bankName))
-            return new AxisBankIntegration();
-        return new HDFCBankIntegration();
+            return context.getBean(AxisBankIntegration.class);
+        return context.getBean(HDFCBankIntegration.class);
     }
 }
