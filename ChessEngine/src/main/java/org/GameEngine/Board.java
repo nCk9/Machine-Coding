@@ -47,12 +47,12 @@ public class Board {
 
     }
 
-    public void updateActivePieces(Map<String, Piece> activePieces){
+    public void updateActivePieces(Map<String, Cell> activePieces){
 
         for(int i=1; i<9; i++)
             for(int j=1; j<9; j++){
                 if(board[i][j].getCurrentPiece() != null &&  board[i][j].getCurrentPiece().getStatus())
-                    activePieces.put(board[i][j].getCurrentPiece().getName(), board[i][j].getCurrentPiece());
+                    activePieces.put(board[i][j].getCurrentPiece().getName(), board[i][j]);
             }
     }
 

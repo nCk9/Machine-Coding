@@ -25,7 +25,7 @@ public class ChessEngine {
     private final Queen wQueen;
     private final Pawn wPawns[];
     private final Pawn bPawns[];
-    Map<String, Piece> activePieces;
+    Map<String, Cell> activePieces;
 
 
     ChessEngine(){
@@ -55,7 +55,7 @@ public class ChessEngine {
             bPawns[i] = new Pawn("bPawn" + (i+1));
         chessBoard = new Board(bRook2, bRook1, bKnight1, bKnight2, bBishop1, bBishop2, bPawns, bKing, wKing, wQueen, bQueen, wRook2, wRook1, wKnight1, wKnight2, wBishop1, wBishop2, wPawns);
 
-        activePieces = new HashMap<String, Piece>();
+        activePieces = new HashMap<String, Cell>();
         chessBoard.updateActivePieces(activePieces);
     }
 
