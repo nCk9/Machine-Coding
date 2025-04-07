@@ -17,4 +17,5 @@ public abstract class Piece {
     }
 
     public abstract Boolean isValidMove(Integer currX, Integer currY, Integer newX, Integer newY);
+    public abstract void makeMove(Integer currX, Integer currY, Integer newX, Integer newY);
 }

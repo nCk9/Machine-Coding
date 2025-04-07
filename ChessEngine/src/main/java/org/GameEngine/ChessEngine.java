@@ -53,7 +53,8 @@ public class ChessEngine {
             wPawns[i] = new Pawn("wPawn" + (i+1));
         for(int i=0; i<8; i++)
             bPawns[i] = new Pawn("bPawn" + (i+1));
-        chessBoard = new Board(bRook2, bRook1, bKnight1, bKnight2, bBishop1, bBishop2, bPawns, bKing, wKing, wQueen, bQueen, wRook2, wRook1, wKnight1, wKnight2, wBishop1, wBishop2, wPawns);
+        chessBoard = new Board(bRook2, bRook1, bKnight1, bKnight2, bBishop1, bBishop2, bPawns, bKing, wKing,
+                wQueen, bQueen, wRook2, wRook1, wKnight1, wKnight2, wBishop1, wBishop2, wPawns);
 
         activePieces = new HashMap<String, Cell>();
         chessBoard.updateActivePieces(activePieces);
@@ -75,5 +76,16 @@ public class ChessEngine {
 
     void getBoardStatus(){
         chessBoard.getBoard();
+    }
+
+    Boolean makeMoveIfValid(String pieceName, Integer newRow, Integer newCol){
+        Cell currentCell  = activePieces.get(pieceName);
+        Integer currRow = currentCell.getCellX();
+        Integer currCol = currentCell.getCellY();
+        Piece currentPiece = currentCell.getCurrentPiece();
+        if(currentPiece.isValidMove(currRow, currCol, newRow, newCol))
+            currentPiece.makeMove(currRow, currCol, newRow, newCol);
+
+        return false;
     }
 }

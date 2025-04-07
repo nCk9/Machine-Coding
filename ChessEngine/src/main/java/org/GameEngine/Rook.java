@@ -8,7 +8,14 @@ public class Rook extends Piece{
 
     @Override
     public Boolean isValidMove(Integer currX, Integer currY, Integer newX, Integer newY) {
-        //add logic to check if move to newX, newY is valid from currX, currY
-        return true;
+        // logic to check if move to newX, newY is valid from currX, currY
+        if(newX < 1 || newX > 8 || newY < 1 || newY > 8)
+            return false;
+        return currX.intValue() == newX.intValue() || currY.intValue() == newY.intValue();
+    }
+
+    @Override
+    public void makeMove(Integer currX, Integer currY, Integer newX, Integer newY) {
+
     }
 }
