@@ -34,5 +34,14 @@ various machine coding problems
    The machine should dispense the selected coffee and provide change if necessary.
    The machine should track the inventory of ingredients and notify when they are running low.
    The machine should handle multiple user requests concurrently and ensure thread safety.
+
 5. ChessGame: Task is to design a chess engine, which validates moves for each of the piece.
    While making a move, if it encounters another piece, it should displace it provided it belongs to the other clan.
+
+6. ParkingLotSystem: 
+   The parking lot should have multiple levels, each level with a certain number of parking spots.
+   The parking lot should support different types of vehicles, such as cars, motorcycles, and trucks.
+   Each parking spot should be able to accommodate a specific type of vehicle.
+   The system should assign a parking spot to a vehicle upon entry and release it when the vehicle exits.
+   The system should track the availability of parking spots and provide real-time information to customers.
+   The system should handle multiple entry and exit points and support concurrent access.
