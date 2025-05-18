@@ -25,7 +25,7 @@ public class ParkingLot {
         return instance;
     }
 
-    public ParkingSpot assignParkingSpot(String vehicleType, String vehicleNumber){
+    public synchronized ParkingSpot assignParkingSpot(String vehicleType, String vehicleNumber){
         return spotAssigner.getParkingSpot(vehicleType, vehicleNumber);
     }
 

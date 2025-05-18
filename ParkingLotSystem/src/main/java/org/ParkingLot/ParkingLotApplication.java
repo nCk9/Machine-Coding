@@ -11,6 +11,7 @@ public class ParkingLotApplication {
         System.out.print("Please enter your vehicle type: ");
         Scanner inputScanner = new Scanner(System.in);
         String vehicleType = inputScanner.next();
+
         System.out.print("Please enter your vehicle number: ");
         String vehicleNumber = inputScanner.next();
         ParkingLot parkingLotInstance = ParkingLot.getInstance();

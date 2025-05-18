@@ -1,6 +1,7 @@
 package org.ParkingLot.ParkingSpot;
 import java.util.ArrayList;
 
+//consider making this singleton as well. In concurrent environment, it'll be required.
 public class FloorWiseParkingSpotAssigner extends ParkingSpotAssigner{
     Integer numberOfSpots;
     Integer numFloors;
@@ -36,6 +37,7 @@ public class FloorWiseParkingSpotAssigner extends ParkingSpotAssigner{
                 }
         }
          spots.get(floor).get(spot).setParkingSpotId(floor*spotsPerFloor + spot + 1);
+//        notifyAll();
         return spots.get(floor).get(spot);
     }
 }
