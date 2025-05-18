@@ -34,3 +34,5 @@ various machine coding problems
    The machine should dispense the selected coffee and provide change if necessary.
    The machine should track the inventory of ingredients and notify when they are running low.
    The machine should handle multiple user requests concurrently and ensure thread safety.
+5. ChessGame: Task is to design a chess engine, which validates moves for each of the piece.
+   While making a move, if it encounters another piece, it should displace it provided it belongs to the other clan.
