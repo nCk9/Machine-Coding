@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/ATMService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ATMService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ChessEngine/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ChessEngine/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CoffeeVendingMachine/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CoffeeVendingMachine/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CricketScoreBoard/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CricketScoreBoard/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ElevatorManagementSystem/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ElevatorManagementSystem/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FileSystemAPI/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FileSystemAPI/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Logger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Logger/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ParkingLotEnhanced/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ParkingLotEnhanced/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ParkingLotSystem/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ParkingLotSystem/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
