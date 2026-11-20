@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/MagicalArena/pom.xml" />
+        <option value="$PROJECT_DIR$/StockExchangeService/pom.xml" />
+        <option value="$PROJECT_DIR$/KadaariStockExchangeService/pom.xml" />
+        <option value="$PROJECT_DIR$/CoffeeVendingMachine/pom.xml" />
+        <option value="$PROJECT_DIR$/ATMService/pom.xml" />
+        <option value="$PROJECT_DIR$/ChessEngine/pom.xml" />
+        <option value="$PROJECT_DIR$/ParkingLotSystem/pom.xml" />
+        <option value="$PROJECT_DIR$/ElevatorManagementSystem/pom.xml" />
+        <option value="$PROJECT_DIR$/CricketScoreBoard/pom.xml" />
+        <option value="$PROJECT_DIR$/Logger/pom.xml" />
+        <option value="$PROJECT_DIR$/FileSystemAPI/pom.xml" />
+        <option value="$PROJECT_DIR$/ParkingLotEnhanced/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="corretto-1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

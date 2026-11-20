@@ -72,3 +72,14 @@ various machine coding problems
    Scorecard for Team 2: Player Name Score 4s 6s Balls P6 10 1 1 2 P7* 8 0 1 3 P8 0 0 0 1 P9 1 0 0 2 P10 0 0 0 1 Total: 19/4 Overs: 1.4
 
    Result: Team 1 won the match by 4 runs
+
+8. Now lets solve another LLD problem
+
+   -> Implement the File system API. The function will mimic their respective Linux commands
+      Implement mkdir
+      Implement cd (The path may contain regex)
+      Implement pwd
+
+9. can we please discuss this LLD problem
+   LLD Question: Well defined logging library API with get and set methods. Data was expected to be handled in memory.
+   what get and set methods are they talking about
