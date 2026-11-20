@@ -37,4 +37,8 @@ public class StackOverflowController {
         answerService.postAnswer(authorId, content, questionId);
     }
 
+    public void acceptAnswer(String questionId, String answerId, String authorId){
+        questionService.acceptAnswer(questionId, answerId, authorId);
+    }
+
 }

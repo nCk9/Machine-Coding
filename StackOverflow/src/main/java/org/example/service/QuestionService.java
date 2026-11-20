@@ -15,4 +15,8 @@ public class QuestionService {
         repo.doPost(question);
     }
 
+    public void acceptAnswer(String questionId, String answerId, String authorId){
+        Question question = (Question) repo.getPost(questionId); //downcasting needed -> implies we need to segregate no, abstraction has started leaking
+        question.acceptAnswer(answerId, authorId);
+    }
 }
